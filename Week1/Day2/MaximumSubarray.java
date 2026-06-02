@@ -1,0 +1,12 @@
+public class MaximumSubarray{
+     public int maxSubArray(int[] nums) {
+        int cs=nums[0];
+        int ms=nums[0];
+        for(int i=1;i<nums.length;i++){
+            cs=cs+nums[i];
+            cs=Math.max(cs,nums[i]);
+            ms=Math.max(cs,ms);
+        }
+        return ms;
+    }
+}
